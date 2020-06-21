@@ -96,7 +96,6 @@ h3{
 @media screen and (max-width: 768px) {
   .module__title span {
     font-size  : 80px;
-    top        : -30px;
   }
 }
 
