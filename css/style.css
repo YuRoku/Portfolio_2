@@ -4,7 +4,6 @@
 /* ---------------------------------------------- */
 html{
   font-size: .9rem;
-  scroll-behavior: smooth;
 }
 body{
   line-height: 2;
@@ -47,20 +46,6 @@ h3{
 /* ---------------------------------------------- /*
 *   ここより上は変更しない
 /* ---------------------------------------------- */
-
-/* ---------------------------------------------- /*
-*   スクロールフェード
-/* ---------------------------------------------- */
-/* .effect-fade {
-  opacity : 0;
-  transform : translate(0, 5rem);
-  transition : all 2000ms;
-}
-
-.effect-fade.effect-scroll {
-  opacity : 1;
-  transform : translate(0, 0);
-} */
 
 /* ---------------------------------------------- /*
 *   見出しの設定
@@ -244,6 +229,10 @@ h3{
   font-family: 'Varela Round',sans-serif;
 }
 
+.navbar-light .navbar-toggler {
+  border-color: rgba(0,0,0,0);
+}
+
 /* ---------------------------------------------- /*
   * Message
 /* ---------------------------------------------- */
@@ -299,10 +288,7 @@ p.about-item__desc {
 }
 
 
-@media screen and (max-width: 991px) {
-  #about {
-    padding: 0;
-  }
+@media screen and (max-width: 992px) {
 
   .about-box__img {
     text-align: center;
@@ -310,13 +296,18 @@ p.about-item__desc {
     padding-top: 80px;
   }
 
-.about-box__img img {
-  width: 280px;
-  height: 280px;
-  object-fit: cover;
-  z-index: 0;
-  border-radius: 50%;
-}
+  .about-box__img img {
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    z-index: 0;
+    border-radius: 50%;
+  }
+
+  .about-box__text{
+    top: 0;
+    margin-bottom: 0;
+  }
 
 }
 
