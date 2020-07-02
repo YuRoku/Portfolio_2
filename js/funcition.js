@@ -1,9 +1,37 @@
 $(function() {
 
   /* ---------------------------------------------- /*
+*   ローディング画面
+/* ---------------------------------------------- */
+  // var h = $(window).height();
+  
+  $('#wrap').css('display','none');
+  // $('#loader-bg ,#loader').height(h).css('display','block');
+  $('#loader-bg ,#loader').css('display','block');
+  
+  
+$(window).load(function () { //全ての読み込みが完了したら実行
+  $('#loader-bg').delay(2000).fadeOut(800);
+  $('#loader').delay(1500).fadeOut(300);
+  $('#wrap').css('display', 'block');
+});
+  
+//10秒たったら強制的にロード画面を非表示
+$(function(){
+  setTimeout('stopload()',10000);
+});
+  
+function stopload(){
+  $('#wrap').css('display','block');
+  $('#loader-bg').delay(900).fadeOut(800);
+  $('#loader').delay(600).fadeOut(300);
+}
+
+
+  /* ---------------------------------------------- /*
 *   タイピング風タイトル
 /* ---------------------------------------------- */
-  $(window).on('load', function () {
+  $(window).load(function () {
 
     $('.typ').children().andSelf().contents().each(function () {
       if (this.nodeType == 3) {
@@ -13,7 +41,7 @@ $(function() {
 
     $('.typ').css({ 'opacity': 1 });
     for (var i = 0; i <= $('.typ').children().size(); i++) {
-      $('.typ').children('span:eq(' + i + ')').delay(80 * i).animate({ 'opacity': 1 }, 0);
+      $('.typ').children('span:eq(' + i + ')').delay(2500).delay(80 * i).animate({ 'opacity': 1 }, 0);
     };
 
   });
