@@ -5,7 +5,7 @@ $(function() {
 /* ---------------------------------------------- */
   // var h = $(window).height();
   
-  $('#wrap').css('display','none');
+  // $('#wrap').css('display','none');
   // $('#loader-bg ,#loader').height(h).css('display','block');
   $('#loader-bg ,#loader').css('display','block');
   
