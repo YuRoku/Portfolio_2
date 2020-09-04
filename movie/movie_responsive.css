@@ -38,6 +38,12 @@
 
 @media screen and ( max-width:576px ) {
 
+  /* 改行 */
+  .br::before {
+    content: "\A" ;
+    white-space: pre ;
+  }
+
   header {
     height: 55px;
   }

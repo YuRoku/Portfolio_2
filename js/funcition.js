@@ -62,31 +62,51 @@ function stopload(){
 *   スムーススクロール
 /* ---------------------------------------------- */
 
-    $('.navbar-brand').click(function() {
-      $('html, body').animate({scrollTop: 0}, 500);
+  $('.navbar-brand').click(function() {
+    $('html, body').animate({scrollTop: 0}, 500);
+    return false;
+  });
+
+  $('a[href^="#"]').click(function(){
+
+    var speed = 500;
+    var href= $(this).attr("href");
+    var target = $(href == "#" || href == "" ? 'html' : href);
+    var position = target.offset().top;
+    var windowWidth = $(window).width();
+    var collapseHeight = $('.navbar-collapse').outerHeight();
+    console.log(windowWidth);
+
+    if ( windowWidth <= 992 ) {
+      $("html, body").animate({scrollTop:position - collapseHeight }, speed, "swing");
+      $('.navbar-collapse').collapse('hide');//クリックで閉じる
       return false;
-    });
-
-    $('a[href^="#"]').click(function(){
-
-      var speed = 500;
-      var href= $(this).attr("href");
-      var target = $(href == "#" || href == "" ? 'html' : href);
-      var position = target.offset().top;
-      var windowWidth = $(window).width();
-      var collapseHeight = $('.navbar-collapse').outerHeight();
-      console.log(windowWidth);
-
-      if ( windowWidth <= 992 ) {
-        $("html, body").animate({scrollTop:position - collapseHeight }, speed, "swing");
-        $('.navbar-collapse').collapse('hide');//クリックで閉じる
-        return false;
-      } else {
-        $("html, body").animate({scrollTop:position}, speed, "swing");
-        return false;
-      }
-    });
+    } else {
+      $("html, body").animate({scrollTop:position}, speed, "swing");
+      return false;
+    }
+  });
 
 
-    
-});
+  // -------------------------------
+  //最終行の調整
+  // -------------------------------
+  var ajustWidth = $('.ajust').children().outerWidth();
+  var ajustHeight = $('.works-item img').height();
+
+  $('.ajust').append(`<div class="empty mx-4"></div>`);
+  $('.empty').css({'width':`${ajustWidth}`, 'height':'0'});
+  $('#others').css('height',`${ajustHeight}px`);
+
+  // リサイズされた時
+  $(window).resize(function() {
+
+    var afterWidth = $('.ajust').children().outerWidth();
+    var afterHeight = $('.works-item img').height();
+
+    $('.empty').css({'width':`${afterWidth}`, 'height':'0'});
+    $('#others').css('height',`${afterHeight}px`);
+
+  });
+
+}); 

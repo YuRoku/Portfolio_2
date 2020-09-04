@@ -346,8 +346,9 @@ p.about-item__desc {
 }
 
 .works-item {
+  background-color: #ccc;
   position: relative;
-  height: 100%;
+  padding: 20px;
 }
  
 .works-item:hover .works-item__overlay {
@@ -356,8 +357,36 @@ p.about-item__desc {
 
 .works-item img {
   width: 100%;
-  height: 100%;
   object-fit: cover;
+}
+
+#others {
+  width: 100%;
+}
+
+#others h3 {
+  color: #000;
+  font-size: 2.5rem;
+  padding: 10px 10px 0;
+  margin: 0;
+}
+
+#others p {
+  color: #000;
+  padding:  0 10px;
+}
+
+#others a {
+  display: block;
+  font-weight: bold;
+}
+
+#others i {
+  margin-right: 10px;
+}
+
+#others a p span {
+  font-size: 0.6rem;
 }
 
 .works-item__overlay {
@@ -374,7 +403,7 @@ p.about-item__desc {
   bottom: 0;
   left: 0;
   right: 0;
-  opacity: 0.7;
+  opacity: 0.9;
 }
 
 .works-item__inner {
@@ -386,10 +415,17 @@ p.about-item__desc {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1;
+  padding: 30px;
+}
+
+.works-item__title {
+  font-size: 1.6rem;
 }
 
 .works-item__desc {
   color: #fff;
+  font-size: 1.2rem;
+  text-align: left;
 }
 
 /* ---------------------------------------------- /*
@@ -437,11 +473,6 @@ p.about-item__desc {
   font-size : 1.1rem;
   letter-spacing : 3px;
   text-align: center;
-  /* color : rgba(255, 255, 255, 0.1);
-  background : linear-gradient(to right, rgb(76, 217, 105), rgb(52, 170, 220), 　rgb(88, 86, 217), rgb(255, 45, 83), rgb(255, 45, 83), rgb(88, 86, 217),rgb(52, 170, 220), rgb(76, 217, 105));
-  background-size : 150%;
-  -webkit-background-clip: text; */
-  /* animation : Transition 10s linear infinite; */
 }
 
 .skills-card__desc {
@@ -478,3 +509,4 @@ footer {
   color: #fff;
   padding: 10px 0;
 }
+

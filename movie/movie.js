@@ -64,6 +64,22 @@ $(function() {
     $('#second .bg').addClass('slideDown');
   }
 
+  // ページ途中でロードされた場合
+  var scroll = $(window).scrollTop();
+
+  if (scroll > firstPos) {
+    $('section').each(function(){
+
+      var elemPos = $(this).offset().top;
+      var windowHeight = $(window).height();
+      
+      if (scroll > elemPos - windowHeight + 300){
+        $('.image', this).addClass('slideIn');
+        $('.bg', this).addClass('slideDown');
+      }
+    });
+  }
+
   // スクロールして実行
   $(window).scroll(function (){
     $('section').each(function(){

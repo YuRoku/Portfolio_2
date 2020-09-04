@@ -1,0 +1,101 @@
+@import url("common.css");
+
+* {
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+a {
+  display: block;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+body {
+  background-image: url(image/background-tile.png);
+}
+
+.container {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+header {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 20px;
+}
+
+#content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#content li {
+  width: 480px;
+  height: 330px;
+  background-color: #fff;
+  text-align: center;
+  margin: 50px 0;
+  padding: 15px 0 20px;
+}
+
+#content li h2 {
+  padding: 5px 0 20px;
+  font-size: 22px;
+
+}
+
+#content li p {
+  line-height: 35px;
+}
+
+#content li a {
+  background-color: #21A49B;
+  width: 140px;
+  margin: 10px auto 0;
+}
+
+footer {
+  height: 110px;
+  background-color: #03525C;
+}
+
+footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+#footer_left ul {
+  display: flex;
+}
+
+#footer_left a {
+  text-align: left;
+  padding: 0;
+}
+
+#footer_left ul a {
+  margin-right: 20px;
+  padding: 0;
+}
+
+#footer_left a img {
+  margin-right: 10px;
+}
+
+#footer_right a {
+  background-color: #21A49B;
+  width: 140px;
+  margin-left: auto;
+}
+
+#footer_right p {
+  color: #fff;
+}

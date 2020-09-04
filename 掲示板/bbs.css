@@ -1,0 +1,245 @@
+@import url("common.css");
+
+* {
+  box-sizing: border-box;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  background-color: #CCCCCC;
+  font-size: 16px;
+}
+
+noscript p {
+  padding-top: 20px;
+}
+
+h2 {
+  padding: 20px 0;
+}
+
+.container {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+/*------記事の検索、新規記事の書き込み------*/
+h3 {
+  /* background-color: blueviolet; */
+  color: #fff;
+  padding-left: 25px;
+  height: 40px;
+  line-height: 55px;
+  cursor: pointer;
+  position: relative;
+}
+
+h3::after {
+  content: '';
+  background-image: url(image/button-plus.png);
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+
+h3.open::after {
+  background-image: url(image/button-minus.png);
+}
+
+#seach h3 {
+  background-image: url(image/background-magenta.png);
+  height: 55px;
+}
+#writing h3 {
+  background-image: url(image/background-orange.png);
+  height: 55px;
+}
+
+#seach form {
+  padding: 20px 25px;
+  background-color: #F0E7F3;
+}
+#writing form {
+  padding: 20px 25px;
+  background-color: #FEF4E5;
+}
+#delete form {
+  padding: 20px 25px;
+  background-color: #E9F5EA;
+}
+
+.accordion {
+  display: none;
+}
+
+
+label {
+  display: inline-block;
+  width: 100px;
+}
+
+input, select {
+  width: 230px;
+  height: 40px;
+  margin-bottom: 2px;
+  padding-left: 5px;
+}
+
+#message {
+  width: 420px;
+}
+
+.submit {
+  width: auto;
+  height: auto;
+  padding: 5px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+
+/*------記事の削除------*/
+#delete h3 {
+  background-image: url(image/background-green.png);
+  height: 55px;
+}
+ /* inline-blockの隙間を消す */
+#delete form {
+  font-size: 0;
+}
+#delete p, #delete input {
+  font-size: 16px;
+}
+
+#delete label {
+  width: 120px;
+  font-size: 16px;
+}
+
+#pass_box {
+  display: flex;
+}
+
+#pass_box label {
+  align-self: center;
+}
+
+#pass_area {
+  display: inline-block;
+}
+
+#pass_area label, #passcheck {
+  width: auto;
+  height: auto;
+}
+
+
+/*------検索結果------*/
+table {
+  width: 100%;
+  text-align: center;
+  margin: 20px 0;
+  border-collapse: collapse;
+}
+
+td {
+  border:  solid 1px #cccccc;
+}
+
+thead tr {
+  background-color: #CC3333;
+  color: #fff;
+  height: 43px;
+}
+
+thead tr td:first-child {
+  width: 65px;
+} 
+thead tr td:nth-child(2) {
+  width: 190px;
+} 
+thead tr td:nth-child(3) {
+  width: 165px;
+} 
+thead tr td:nth-child(4) {
+  width: 115px;
+} 
+thead tr td:nth-child(5) {
+  width: 140px;
+} 
+
+tbody td {
+  font-size: 14px;
+  padding: 13px 0;
+  text-align: center;
+}
+
+tbody td:last-child {
+  text-align: left;
+  padding: 5px;
+}
+
+.nothing {
+  text-align: center;
+  color: #CC3333;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 20px 0; 
+}
+
+
+/*------フッター------*/
+
+a {
+  display: block;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+}
+footer {
+  height: 110px;
+  background-color: #03525C;
+}
+
+footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+#footer_left ul {
+  display: flex;
+}
+
+#footer_left a {
+  text-align: left;
+  padding: 0;
+}
+
+#footer_left ul a {
+  margin-right: 20px;
+  padding: 0;
+}
+
+#footer_left a img {
+  margin-right: 10px;
+}
+
+#footer_right a {
+  background-color: #21A49B;
+  width: 140px;
+  margin-left: auto;
+}
+
+#footer_right p {
+  color: #fff;
+}

@@ -1,0 +1,16 @@
+@charset "utf-8";
+
+/* このファイルは一切変更しないこと */
+
+*{
+   margin : 0;
+   padding : 0;
+}
+
+html{
+	overflow-y : scroll;
+}
+
+body{
+	font-family:'meiryo', 'メイリオ', 'ヒラギノ角ゴPro W3', 'Hiragino KaKu Gothic Pro', 'ＭＳ Ｐゴシック', verdana, Osaka, 'trebuchet ms', sans-serif;
+}
