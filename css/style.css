@@ -350,7 +350,7 @@ p.about-item__desc {
   position: relative;
   padding: 20px;
 }
- 
+
 .works-item:hover .works-item__overlay {
   opacity: 1;
 }
@@ -394,6 +394,22 @@ p.about-item__desc {
 @media screen and (max-width: 992px) {
   #others p {
     font-size  : 12px;
+    padding: 0;
+  }
+
+  #others a p span {
+    font-size: 6px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+
+  #others h3 {
+    font-size: 24px;
+  }
+
+  #others p {
+    font-size  : 11px;
     padding: 0;
   }
 
