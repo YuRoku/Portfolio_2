@@ -1,0 +1,92 @@
+/* -------------------
+  テーブル
+--------------------*/
+#wrap {
+  display: inline-block;
+  position: relative;
+}
+
+#delete_name {
+  font-size: 1vw;
+  position: absolute;
+  margin: 0 !important;
+  top: -30px;
+  right: 0;
+}
+
+#personally table,
+#personally tr,
+#personally td {
+  border: solid 1px rgba(255, 255, 255, 0.3);
+}
+
+#personally tbody tr:nth-child(odd) td:nth-child(1),
+#personally tbody tr:nth-child(odd) td:nth-child(2),
+#personally tbody tr:nth-child(odd) td:nth-child(3),
+#personally tbody tr:nth-child(odd) td:nth-child(4) {
+  background-color: #222;
+}
+
+#personally tbody tr:nth-child(even) td:nth-child(1),
+#personally tbody tr:nth-child(even) td:nth-child(2),
+#personally tbody tr:nth-child(even) td:nth-child(3),
+#personally tbody tr:nth-child(even) td:nth-child(4) {
+  background-color: #000;
+}
+
+#personally tbody tr:nth-child(odd) td:nth-child(n+5) {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+#personally tr:first-child td {
+  padding: 0.5em;
+  text-align: center;
+}
+
+#personally td:first-child {
+  padding: 1em;
+  line-height: 1.3;
+}
+
+#personally td:nth-child(n+2) {
+  padding: 3em;
+  position: relative;
+  white-space: nowrap;
+  border-right: none;
+  border-left: none;
+}
+
+input[type="text"]:read-only {
+  background: none;
+  border: none;
+  margin: 0;
+}
+
+#personally .button {
+  display: block;
+}
+
+
+/* -------------------
+  〇△×ボタン
+--------------------*/
+input[type=radio] {
+  display: none;
+}
+
+#personally label {
+  display: block;
+  border: solid 1px rgba(255, 255, 255, 0.3);
+  /* background-color: rgba(255, 255, 255, 0.2); */
+  padding: 1em;
+  border-radius: 5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+input[type="radio"]:checked + label {
+  background-color: #ffee00da !important;
+  color: #000 !important;
+}

@@ -1,0 +1,101 @@
+@media screen and (max-width:768px){
+
+  body {
+    font-size: 2vw;
+  }
+
+  /* -------------------
+    共通
+  --------------------*/
+  .title {
+    font-size: 4vw;
+  }
+
+  .sub_title {
+    font-size: 3vw;
+  }
+
+  /* -------------------
+    ヘッダー
+  --------------------*/
+  header {
+    height: 16vw;
+  }
+
+  #logo {
+    width: 20vw;
+    bottom: 1vw;
+  }
+
+  header h1 {
+    font-size: 5vw;
+    bottom: 4vw;
+  }
+
+  /* -------------------
+    スケジュール
+  --------------------*/
+  #schedule label {
+    font-size: 3vw;
+  }
+
+  /* -------------------
+    スクロールバー
+  --------------------*/
+  ::-webkit-scrollbar{
+    width: 5px;
+    height: 5px;
+  }
+
+  /* -------------------
+    フッター
+  --------------------*/
+  footer {
+    height: 5vw;
+  }
+
+  footer p {
+    line-height: 5vw;
+  }
+
+}
+
+@media screen and (max-width:666px){
+  .input_date {
+    width: 6em;
+  }
+
+  #delete_name {
+    top: -25px;
+  }
+}
+@media screen and (max-width:480px){
+  .input_date {
+    width: 11em;
+  }
+
+  #delete label {
+    padding: 0.5em;
+    font-size: 2vw;
+  }
+
+  #delete_name {
+    top: -20px;
+  }
+  /* -------------------
+    コメント
+  --------------------*/
+  .delete_comment {
+    top: 50%;
+  }
+  
+  .form_box {
+    display: block;
+  }
+
+  textarea {
+    width: 100%;
+  }
+
+
+}

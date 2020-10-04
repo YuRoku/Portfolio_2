@@ -28,51 +28,54 @@
 
 <body data-spy="scroll" data-target="#Navbar">
 
+
 <!------------------------------------------------
-	* ローディング画面
+	* トップビジュアル
 -------------------------------------------------->
+<div id="youtube-wrap">
+
+	<!-- ローディング画面 -->
 	<div id="loader-bg">
 		<div id="loader">
 			<img src="images/loading.gif" width="500" height="500"alt="Now Loading..." />
 		</div>
 	</div>
-	<!-- <div id="wrap">
-		ロード後に表示させたい内容
-	</div> -->
 
-<!------------------------------------------------
-	* トップビジュアル
--------------------------------------------------->
-		<div id="youtube-wrap">
-			<section id="top">
-				<div class="top-item">
-					<img src="images/YuuRokuロゴ’(白).png" alt="">
-					<p class="top-item__main typ">Welcome<br>YuuRoku's Portfolio.</p>
-					<p class="top-item__sub typ">ポートフォリオサイトへようこそ!!</p>
-				</div>
-				<!-- 動くマウスの記述 -->
-				<div class="mouse-icon">
-					<div class="wheel"></div>
-				</div>
-			</section>
-
-				<div id="youtube" data-property="{
-					videoURL: 'https://youtu.be/shAYCwvObD4',
-					containment: '#top',
-					autoPlay: true,
-					stopMovieOnBlur: false,
-					loop: 1,
-					mute: true,
-					startAt: 0,
-					opacity: 1,
-					showControls: false,
-					showYTLogo: false,
-					onReady: function( player ) {
-						$('.loading').hide('slow');
-					}
-					}">
-				</div>
+	<div id="wrap">
+		<section id="top">
+			<div class="top-item">
+				<img src="images/YuuRoku_logo.png" alt="ロゴ画像">
+				<p class="top-item__main typ">Welcome<br>YuuRoku's Portfolio.</p>
+				<p class="top-item__sub typ">ポートフォリオサイトへようこそ!!</p>
 			</div>
+			
+			<!-- 動くマウスの記述 -->
+			<div class="mouse-icon">
+				<div class="wheel"></div>
+			</div>
+		</section>
+
+		<div id="youtube" data-property="{
+			videoURL: 'https://youtu.be/shAYCwvObD4',
+			containment: '#top',
+			autoPlay: true,
+			stopMovieOnBlur: false,
+			loop: 1,
+			mute: true,
+			startAt: 0,
+			opacity: 1,
+			showControls: false,
+			showYTLogo: false,
+			onReady: function( player ) {
+				$('.loading').hide('slow');
+			}
+			}">
+		</div>
+	</div>
+
+
+
+</div>
 
 <!------------------------------------------------
 	* ナビバー
@@ -126,7 +129,7 @@
 			</p>
 			<p class="text-center mt-4">
 				はじめまして。<span class="br"></span>末益祐吾と申します。
-				<br>フロントエンドエンジニアを<span class="br"></span>目指して勉強中です。
+				<br>現在エンジニアを<span class="br"></span>目指して勉強中です。
 			</p>
 			<p class="text-center mt-4">
 				悪戦苦闘しながらも<span class="br"></span>日々成長を
@@ -134,7 +137,7 @@
 			</p>
 			<p class="text-center mt-4">
 				コミュニケーションを<span class="br"></span>大事にして
-				<br>お客様と理想の<span class="br"></span>Webサイトを
+				<br>お客様と理想の<span class="br"></span>Webサイトやシステムを
 				<br>一緒に作り上げていきます。
 			</p>
 		</section>
@@ -211,41 +214,90 @@
 				</div>
 
 				<div class="row justify-content-center wow fadeInUp ajust" data-wow-offset="200" >
-					<div class="col-lg-5 col-md-6 col-10 mx-4 my-5">
+					<div class="col-md-5 col-10 mx-4 my-5">
+						<div class="works-item">
+							<img src="images/web_schedule_service.png" alt="">
+							<div class="works-item__overlay">
+								<div class="works-item__inner">
+									<h3 class="works-item__title">出欠管理サービス</h3>
+									<p class="works-item__desc">
+										■使用スキル
+										<br>
+										JavaScript(jQuery) / PHP
+										<br>
+										■制作時期
+										<br>
+										学習開始後4か月目（2020年9月）
+										<br>
+										■制作時間
+										<br>
+										70時間
+									</p>
+									<a href="出欠管理サービス/index.php">MORE</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-md-5 col-10 mx-4 my-5">
 						<div class="works-item">
 							<img src="images/Picture.png" alt="">
 							<div class="works-item__overlay">
 								<div class="works-item__inner">
 									<h3 class="works-item__title">写真・画像加工</h3>
-									<p class="works-item__desc">illustratorやPhotoshopを使用して、POP・ポスター・サムネイルの制作が可能です。</p>
+									<p class="works-item__desc">
+										■使用スキル
+										<br>
+										illustrator / Photoshop
+										<br>
+										■制作時期
+										<br>
+										学習開始後1か月～（2018年3月～）
+										<br>
+										■制作時間
+										<br>
+										3～10時間程度（一作品につき）
+									</p>
 									<a href="Picture/picture.html">MORE</a>
 								</div>
 							</div>
 						</div>
 					</div>
 
-					<div class="col-lg-5 col-md-6 col-10 mx-4 my-5">
+					<div class="col-md-5 col-10 mx-4 my-5">
 						<div class="works-item">
 							<img src="images/movie.png" alt="">
 							<div class="works-item__overlay">
 								<div class="works-item__inner">
 									<h3 class="works-item__title">動画編集・映像制作</h3>
-									<p class="works-item__desc">Adobe	PremiereProを使用して、主にYouTube関連の動画制作を経験しました。</p>
+									<p class="works-item__desc">
+										■使用スキル
+										<br>
+										Adobe Premiere Pro / Audition
+										<br>
+										■制作時期
+										<br>
+										学習開始後2か月～（2020年2月～）
+										<br>
+										■制作時間
+										<br>
+										3～15時間程度（一作品につき）
+									</p>
 									<a href="movie/movie.html">MORE</a>
 								</div>
 							</div>
 						</div>
 					</div>
 
-					<div class="col-lg-5 col-md-6 col-10 mx-4 my-5">
+					<div class="col-md-5 col-10 mx-4 my-5">
 						<div class="works-item">
 							<div id="others">
 								<h3>Others</h3>
 								<p>プログラミング学習中の課題制作集。</p>
 								<br>
-								<a href="画像ギャラリー/index.php"><p><i class="fas fa-external-link-square-alt"></i>画像ギャラリー<span>（JavaScript/PHP）</span></p></a>
-								<a href="掲示板/bbs.php"><p><i class="fas fa-external-link-square-alt"></i>掲示板<span>（JavaScript/Ajax/PHP/DB）</span></p></a>
-								<a href="ペンギン図鑑/index.html"><p><i class="fas fa-external-link-square-alt"></i>ペンギン図鑑<span>（JavaScript/Ajax/PHP）</span></p></a>
+								<a href="gallery/index.php"><p><i class="fas fa-external-link-square-alt"></i>画像ギャラリー<span>（JavaScript/PHP）</span></p></a>
+								<a href="bbs/bbs.php"><p><i class="fas fa-external-link-square-alt"></i>掲示板<span>（JavaScript/Ajax/PHP/DB）</span></p></a>
+								<a href="penginn/index.html"><p><i class="fas fa-external-link-square-alt"></i>ペンギン図鑑<span>（JavaScript/Ajax/PHP）</span></p></a>
 							</div>
 
 						</div>
@@ -393,6 +445,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script> -->
 
 
 

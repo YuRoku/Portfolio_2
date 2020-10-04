@@ -56,7 +56,6 @@ main .container {
   padding: 100px 30px;
 }
 
-
 section {
   width: 480px;
   height:300px;
@@ -98,7 +97,6 @@ section {
   position: absolute;
   top: 50%;
   right: 0;
-  /* transform: translateY(-50%); */
 }
 
 .text {

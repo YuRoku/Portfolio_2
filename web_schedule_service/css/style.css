@@ -1,0 +1,454 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: 'Noto Sans JP', sans-serif;
+  background-color: #000;
+  color: #fff;
+}
+
+#bg-emblem {
+  background-image: url(../images/半透明エンブレム10.png);
+  background-repeat: no-repeat;
+  background-size: 40vh;
+  background-position: center 30vh;
+  background-attachment: fixed;
+}
+
+main {
+  padding: 3vw 5vw;
+}
+
+
+/* -------------------
+  共通
+--------------------*/
+.container {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 3.2rem;
+  font-weight: bold;
+  border-left: solid 0.3em #ffee00;
+  padding-left: 0.5em;
+  margin-bottom: 1.5em;
+  font-family: 'Chivo', sans-serif;
+}
+
+.sub_title {
+  width: fit-content;
+  font-size: 2.4rem;
+  background: linear-gradient(transparent 70%, #ff0088 70%);
+}
+
+.button {
+  background-color:  #ff0088cc;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+
+/* -------------------
+  ヘッダー
+--------------------*/
+header {
+  background: linear-gradient(to bottom, #880088,  #880088cc 70%, rgba(0, 0, 0, 0));
+  height: 130px;
+  padding: 1em 2em 0;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  position: relative;
+}
+
+#logo {
+  width: 200px;
+  position: absolute;
+}
+
+header h1 {
+  font-family: 'Chivo', sans-serif;
+  font-size: 4rem;
+  font-weight: bolder;
+  position: absolute;
+  right: 0;
+  bottom: 25px;
+  color: #880088;
+  text-shadow: 
+      1px  1px 0px #ffffff,
+    -1px  1px 0px #ffffff,
+      1px -1px 0px #ffffff,
+    -1px -1px 0px #ffffff,
+      1px  0px 0px #ffffff,
+      0px  1px 0px #ffffff,
+    -1px  0px 0px #ffffff,
+      0px -1px 0px #ffffff;
+}
+
+header h1 span {
+  color: #fff;
+  text-shadow: none;
+}
+
+
+/* -------------------
+  スケジュール
+--------------------*/
+#schedule table,
+#schedule tr,
+#schedule td {
+  border: solid 1px rgba(255, 255, 255, 0.3);
+}
+
+#schedule tbody tr:nth-child(odd) td:nth-child(1),
+#schedule tbody tr:nth-child(odd) td:nth-child(2),
+#schedule tbody tr:nth-child(odd) td:nth-child(3),
+#schedule tbody tr:nth-child(odd) td:nth-child(4) {
+  background-color: #222;
+}
+
+#schedule tbody tr:nth-child(even) td:nth-child(1),
+#schedule tbody tr:nth-child(even) td:nth-child(2),
+#schedule tbody tr:nth-child(even) td:nth-child(3),
+#schedule tbody tr:nth-child(even) td:nth-child(4) {
+  background-color: #000;
+}
+
+#schedule tbody tr:nth-child(odd) td:nth-child(n+5) {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+#schedule td {
+  padding: 0.5em 1em;
+  position: relative;
+  white-space: nowrap;
+  line-height: 1.3;
+}
+
+#schedule td p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+#schedule thead td:nth-child(n+5),
+#schedule tbody td:nth-child(n+5) {
+  border-right: none;
+  border-left: none;
+}
+
+#schedule thead tr td input[type="submit"] {
+  margin: 0.5em;
+}
+
+
+/* テーブルスクロール */
+#schedule table {
+  display: inline-block;
+  max-width: 100%;
+  max-height: 80vh;
+  overflow: auto;
+  border-collapse: separate;
+}
+
+#schedule thead td {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: #000;
+}
+
+#schedule thead td:nth-child(1),
+#schedule thead td:nth-child(2),
+#schedule thead td:nth-child(3),
+#schedule thead td:nth-child(4) {
+  position: -webkit-sticky;
+  position: sticky;
+  z-index: 3;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+}
+
+#schedule thead td:nth-child(1) {
+  left: 0;
+  z-index: 3;
+  padding: 0;
+}
+
+#schedule tbody td:nth-child(1),
+#schedule tbody td:nth-child(2),
+#schedule tbody td:nth-child(3),
+#schedule tbody td:nth-child(4) {
+  position: -webkit-sticky;
+  position: sticky;
+  z-index: 2;
+}
+
+#schedule tbody td:nth-child(1) {
+  left: 0;
+}
+
+::-webkit-scrollbar{
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track{
+  background: none;
+  border: none;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb{
+  background: #555;
+  border-radius: 10px;
+}
+
+#schedule_edit {
+  display: block;
+  width: fit-content;
+  padding: 0.5em;
+  margin-top: 1em;
+}
+
+#schedule .sub_title {
+  margin: 2em 0 0.5em;
+}
+
+#schedule label {
+  display: inline-block;
+  font-size: 2rem;
+}
+
+#add_name {
+  margin-right: 2em;
+}
+
+
+/* -------------------
+  スケジュール追加用
+--------------------*/
+#time_place {
+  margin-top: 5em;
+}
+
+#time_place form {
+  padding-top: 0;
+}
+
+.input_date {
+  width: 5em;
+  text-align: center;
+}
+
+#time_place td {
+  padding: 0.5em 2em 0.5em 0;
+  vertical-align: middle;
+}
+
+#time_place td select,
+#time_place td input {
+  margin: 0;
+  font-size: 1.5vw;
+}
+
+#time_place th {
+  font-size: 1.5vw;
+}
+
+#time_place td p {
+  font-size: 2vw;
+}
+
+#time_place .button,
+#personally .button {
+  margin-top: 1.5em;
+}
+
+
+/* -------------------
+  スケジュール削除用
+--------------------*/
+
+input[type=checkbox] {
+  display: none;
+}
+
+#delete td {
+  display: inline-block;
+  width: 10em;
+  margin: 1em;
+}
+
+#delete label {
+  display: block;
+  padding: 1em;
+  border: solid 1px rgba(255, 255, 255, 0.3);
+  max-width: 10em;
+  border-radius: 5px;
+}
+
+.delete_wrap {
+  max-width: 8em;
+  margin: 0 auto;
+}
+
+
+#delete label p {
+  text-align: left;
+}
+
+input[type="checkbox"]:checked + label {
+  background-color: #ffee00da !important;
+  color: #000 !important;
+}
+
+
+/* -------------------
+  コメント
+--------------------*/
+#comment {
+  margin-top: 5em;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-top: solid 1px rgba(255, 255, 255, 0.8);
+  border-bottom: solid 1px rgba(255, 255, 255, 0.8);
+  padding: 0 2em 2em;
+}
+
+.article_top {
+  border-top: solid 1px rgba(255, 255, 255, 0.3);
+  padding-top: 1.5em;
+  position: relative;
+}
+
+.article_top:first-child {
+  border-top: none;
+}
+
+.article_top p {
+  display: inline-block;
+  margin: 0 1em 1em 0;
+  padding: 0.5em;
+}
+
+.article_main {
+  display: flex;
+  align-self: flex-end;
+  width: 90%;
+  margin-bottom: 2em;
+}
+
+.article_main:last-child {
+  margin-bottom: 0;
+}
+
+.article_main p {
+  width: 100%;
+  padding: 0.5em;
+  margin-left: 1em;
+  border: solid 1px rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.1);
+  line-height: 2;
+  border-radius: 5px;
+}
+
+.delete_comment {
+  position: absolute;
+  right: 0;
+  padding: 0.3em;
+  border: solid 1px rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+}
+
+#delete_comment_button {
+  position: absolute;
+  right: 0;
+  margin: 1em 0;
+}
+
+
+form {
+  padding: 1em 2em;
+}
+
+#comment form {
+  padding: 0 0 5em;
+  position: relative;
+}
+
+input, select, textarea {
+  background-color: rgba(255, 255, 255, 0.2);
+  border: solid 1px rgba(255, 255, 255, 0.3);
+  margin: 1em 1em 1em 0;
+  padding: 0.5em;
+  border-radius: 5px;
+}
+
+.form_box {
+  display: inline-block;
+  margin: 1em 3em 1em 0;
+}
+
+.name {
+  width: 15em;
+}
+
+select::-ms-expand {
+	display: none;
+}
+select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+  appearance: none;
+	background-image: url(../images/arrow_down.svg);
+	background-repeat: no-repeat;
+	background-size: 1em;
+  background-position: right 0.5em center;
+  padding-right: 2em;
+}
+
+option {
+  background-color: #333;
+}
+
+textarea {
+  width: 35em;
+  height: 10em;
+}
+
+button {
+  text-align: center;
+  width: 20vw;
+  margin: 0 auto;
+  padding: 0.5em;
+}
+
+
+/* -------------------
+  フッター
+--------------------*/
+footer {
+  background-color: #eee;
+  height: 30px;
+  text-align: center;
+}
+
+footer p {
+  color: #333;
+  font-weight: bold;
+  line-height: 30px;
+}

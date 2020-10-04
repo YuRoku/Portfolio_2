@@ -9,7 +9,7 @@
   mb_internal_encoding("UTF-8");
 
   $to = "yugo.suemasu.2020@gmail.com"; //ここのメールアドレスを変更する
-  $subject = ”お問い合わせを受信しました”;
+  $subject = "お問い合わせを受信しました";
   $name = htmlspecialchars($_SESSION['name']);
   $mail = htmlspecialchars($_SESSION['mail']);
   $content = htmlspecialchars($_SESSION['content']);
@@ -24,7 +24,7 @@
 
   $_SESSION['mailexit'] = 'complete';
 
-  header('Location: /#contact');
+  // header('Location: /#contact');
 
   ?>
   <?php if((mb_send_mail($to,$subject,$body,$header))) : ?>

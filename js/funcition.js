@@ -1,22 +1,13 @@
-$(function() {
-
-  /* ---------------------------------------------- /*
+/* ---------------------------------------------- /*
 *   ローディング画面
 /* ---------------------------------------------- */
-  // var h = $(window).height();
-  
-  // $('#wrap').css('display','none');
-  // $('#loader-bg ,#loader').height(h).css('display','block');
-  $('#loader-bg ,#loader').css('display','block');
-  
-  
-$(window).load(function () { //全ての読み込みが完了したら実行
+$(window).load(function () { 
   $('#loader-bg').delay(2000).fadeOut(800);
   $('#loader').delay(1500).fadeOut(300);
-  $('#wrap').css('display', 'block');
+  $('#wrap').fadeIn(0);
 });
   
-//10秒たったら強制的にロード画面を非表示
+// //10秒たったら強制的にロード画面を非表示
 $(function(){
   setTimeout('stopload()',10000);
 });
@@ -27,8 +18,7 @@ function stopload(){
   $('#loader').delay(600).fadeOut(300);
 }
 
-
-  /* ---------------------------------------------- /*
+/* ---------------------------------------------- /*
 *   タイピング風タイトル
 /* ---------------------------------------------- */
   $(window).load(function () {
@@ -49,8 +39,16 @@ function stopload(){
   /* ---------------------------------------------- /*
 *   動画背景
 /* ---------------------------------------------- */
+$(function() {
 
+  var width = $(window).width();
+
+  if (width < 480) {
+    $('#youtube').attr('data-property', "{videoURL: 'https://youtu.be/HrP7QZz8CRY', containment: '#top', align: '0%,0%', autoPlay: true, stopMovieOnBlur: false, loop: 1, mute: true, startAt: 0, opacity: 1, showControls: false, showYTLogo: false, onReady: function( player ) {$('.loading').hide('slow');}}");
+  }
+      
   $('#youtube').YTPlayer();
+
 
   /* ---------------------------------------------- /*
 *   スクロールフェード
@@ -92,20 +90,19 @@ function stopload(){
   //最終行の調整
   // -------------------------------
   var ajustWidth = $('.ajust').children().outerWidth();
-  var ajustHeight = $('.works-item img').height();
 
-  $('.ajust').append(`<div class="empty mx-4"></div>`);
-  $('.empty').css({'width':`${ajustWidth}`, 'height':'0'});
-  $('#others').css('height',`${ajustHeight}px`);
+  $(window).load(function () {
+    $('.ajust').append(`<div class="empty mx-4"></div>`);
+    $('.empty').css({'width':`${ajustWidth}`, 'height':'0'});
+  });
+
 
   // リサイズされた時
   $(window).resize(function() {
 
     var afterWidth = $('.ajust').children().outerWidth();
-    var afterHeight = $('.works-item img').height();
 
     $('.empty').css({'width':`${afterWidth}`, 'height':'0'});
-    $('#others').css('height',`${afterHeight}px`);
 
   });
 
