@@ -123,7 +123,7 @@ h3{
 }
 
 #youtube-wrap {
-  background-image : url(../images/IMG_0951.jpg);
+  /* background-image : url(../images/IMG_0951.jpg); */
   background-size: cover;
   background-position: center;
   width: 100%;

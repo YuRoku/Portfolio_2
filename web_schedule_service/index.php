@@ -19,7 +19,7 @@
 ------------------------>
     <header>
       <div class="container">
-        <a href="index.php"><img id="logo" src="images/べすたロゴ.png" alt="ロゴ"></a>
+        <a href="index.php"><img id="logo" src="images/besta_logo.png" alt="ロゴ"></a>
         <h1><span>W</span>eb <span>S</span>chedule <span>S</span>ervice</h1>
       </div>
     </header>
@@ -63,6 +63,7 @@
               </form>
             </thead>
             <tbody>
+
               <?php
                 try{
                   require_once('php/DBInfo.php');
@@ -95,7 +96,7 @@
                     //日付のカラムを取得
                     $sql = "SELECT COLUMN_NAME
                             FROM INFORMATION_SCHEMA.COLUMNS
-                            WHERE TABLE_SCHEMA= 'web_schedule_service'
+                            WHERE TABLE_SCHEMA= 'yuuroku_web_schedule'
                             AND TABLE_NAME= 'add_name';";
 
                     $statement = $pdo->query($sql);

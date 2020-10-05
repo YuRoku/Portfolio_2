@@ -145,12 +145,12 @@ $(function() {
   var first_count = $('.article_top').length;
 
   if (first_count > 4) {
-    $('button').show();
+    $('article button').show();
   } else {
-    $('button').hide();
+    $('article button').hide();
   }
 
-  $('button').on('click', function(){
+  $('article button').on('click', function(){
 
     var count = $('.article_top').length;
 
@@ -198,10 +198,10 @@ function successFunction(data){
     $("article").append(`<div class="article_top">${append_date}${append_name}${append_category}${append_select}</div>`);
     $("article").append(`<div class="article_main">${replace_message}</div>`);
 
-    $('button').appendTo('article');
+    $('article button').appendTo('article');
 
   } else if (date == undefined) {
-    $('button').hide();
+    $('article button').hide();
   }
     
 }

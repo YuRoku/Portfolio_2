@@ -10,7 +10,7 @@ body {
 }
 
 #bg-emblem {
-  background-image: url(../images/半透明エンブレム10.png);
+  background-image: url(../images/emblem_opa10.png);
   background-repeat: no-repeat;
   background-size: 40vh;
   background-position: center 30vh;
@@ -430,7 +430,7 @@ textarea {
   height: 10em;
 }
 
-button {
+article button {
   text-align: center;
   width: 20vw;
   margin: 0 auto;

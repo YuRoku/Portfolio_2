@@ -20,7 +20,7 @@
 ------------------------>
     <header>
       <div class="container">
-        <a href="../index.php"><img id="logo" src="../images/べすたロゴ.png" alt="ロゴ"></a>
+        <a href="../index.php"><img id="logo" src="../images/besta_logo.png" alt="ロゴ"></a>
         <h1><span>W</span>eb <span>S</span>chedule <span>S</span>ervice</h1>
       </div>
     </header>

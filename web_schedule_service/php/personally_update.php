@@ -28,7 +28,7 @@
       //日付のカラムを取得
       $sql = "SELECT COLUMN_NAME
               FROM INFORMATION_SCHEMA.COLUMNS
-              WHERE TABLE_SCHEMA= 'web_schedule_service'
+              WHERE TABLE_SCHEMA= 'yuuroku_web_schedule'
               AND TABLE_NAME= 'add_name';";
 
       $statement = $pdo->query($sql);
